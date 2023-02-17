@@ -290,8 +290,8 @@
 
 _______________________________
 // 16) ES6 ve ondan sonrakilar nədir?
-// Javascript 1995 ilde 10 gune  yaradilib ve 2006 ilden javascripte cox boyuk yeniliyler elave olunuv onagerede ES6+
-//  deyilir ola bilerki bizim bizim yazdigimiz ES bezi brauzerlerde acmiya biler yani desktelenmiye biler onagerede 
+// Javascript 1995 ilde 10 gune  yaradilib ve 2006 ilden javascripte  yeniliyler elave olunub onagerede ES6+
+//  deyilir ola bilerki bizim  yazdigimiz ES bezi brauzerlerde acmiya biler yani desktelenmiye biler onagerede 
 //  biz Bubldan istvade eleyirik yani bu bizim ESkriptimizi ES5 cevirir sag terefde bizim yazdigimiz kod gosterir sol 
 //  terefdese cevirilmis kodu gosterir ES5
 //  cevirir cunki ES5 her brauzer terefden testeklenir
@@ -396,3 +396,46 @@ _______________________________
 // join('')
 // string Array ceviren 
 // split('')
+
+// 26) forEach ve map arasindaki ferq ? 
+
+// foreach ve mapin oxsari oduki ikside gosterdiyi arrayda dovur eeyir ama vergleri onan ibarettirki map dovur elemeyden 
+// elave yeni yalanmis masive coppy eleye bilir ama foreach yoxlasog eror vericek 
+// misal :
+// 1)var arr = [12,42,64,12]
+// var arr2 = arr.map(x=>{
+//     x = x+5
+// })
+
+// 2)var arr = [12,42,64,12]
+// var arr2 = arr.forEach(x=>{
+//     x = x+5
+// })
+
+// 27) O(log n) nece teying olunur ? 
+// Bigoneteysinde  ikinci en yahsidi  onu nece tapmag olur o Binerserch adlanir ozeliyi oduku o her dovur 
+// eledikde arrayimizi yariya endirir her defe ve bir ozeliyi varki  Binerserch ancag sirali 
+// araylerle isleyir sagnan solda duran ededleri yoxlayir kicik olani sol terefe Atir ve her defe 
+// bele gedir. 0log(n) misal :
+// function(arr ve tapmag istediyimiz regemi verig) ve bu arrayin ortadaki indexsin elementini  tapir ve 
+// tuttugumuz regemnenn mugaise eleyi eger ortadaki eded tutugumuz regemnen kicikdirse araydaki ortadaki 
+// elementi ve onan sol terefi silir ve bele bele davam eleyir taki ortadaki element tutugumuz regeme beraber olanacan
+
+// 28) “Hello my friend. How are you ?” bu cumlede en cox istifade olunan her ve ya herifleri ekranda gosterin
+
+// var word = 'Hello my friend. How are you ?'
+// var leterrs = word.split('')
+// var main = []
+// leterrs.map(x=>{
+//   if(!main.includes(x)){
+//     main.push(x)
+//   }
+// })
+// main.map(k=>{
+//   leterrs.filter(y=> y==k)
+//   if(leterrs.filter((y=> y==k)).length >1){
+//     console.log(` cumlede birden cox isfade olunan heriflel : --`,k)
+//   }
+// })
+
+
